@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/c26a778546.js" crossorigin="anonymous"></script>
     <!-- css file add  -->
     <link rel="stylesheet" href="styles/styles.css">
+
 </head>
 
 <body class=" ">
@@ -76,8 +77,11 @@
                             events in one place!" <br>
                             "Your gateway to seamless event access download now and never miss a moment!"
                         </p>
-
-                        <button class="btn btn-active bg-[#1DD100] text-white">Buy Now</button>
+                        <!-- when press buy btn then show main part  -->
+                        <a href="#ticket"
+                            onclick="document.getElementById('ticket').scrollIntoView({ behavior: 'smooth' });">
+                            <button class="btn btn-active bg-[#1DD100] text-white">Buy Now</button>
+                        </a>
                     </div>
                 </div>
                 <!-- live update div  -->
@@ -159,11 +163,11 @@
 
 
     <!-- main part start  -->
-    <main class="mt-24 border-[#1DD100]  border-t-4 rounded-t-[45px]">
+    <main id="ticket" class="mt-24 border-[#1DD100]  border-t-4 rounded-t-[45px]">
         <!-- ticket price section part -->
-        <section class="mt-20 ">
+        <section class="mt-20  ">
             <!-- heading and text title  -->
-            <div class="text-center space-y-6">
+            <div class="text-center space-y-6 ">
                 <h2 class="capitalize text-[#1DD100] text-6xl font-semibold">Nahidul's paribahan</h2>
                 <p class="text-white text-xl text-center">"Streamline your experience with our ticket
                     app effortlessly book,
@@ -175,62 +179,90 @@
             </div>
             <!-- ticket price show div  -->
 
-            <div class="bg-white m-12 rounded-[20px] flex justify-center items-center p-14">
+            <div class="bg-white mb-0  m-12 flex flex-col justify-center items-center p-12 rounded-[20px]  ">
                 <!-- bus shedule  -->
 
-                <!-- 1st div  -->
-                <div>
-                    <div class="flex gap-x-28">
-                        <div class="flex gap-5">
-                            <img src="images/bus-logo.png" alt="">
-                            <div>
-                                <h2 class="text-3xl font-bold text-black">Nahidul's Paribahan</h2>
-                                <p>Coach-1313-WEB ! AC_Business</p>
+                <div class="bg-gray-100 rounded-[20px] flex justify-center items-center pl-12 pr-12 ">
+                    <!-- 1st div  -->
+                    <div>
+                        <div class="flex gap-x-28">
+                            <div class="flex gap-5">
+                                <img src="images/bus-logo.png" alt="">
+                                <div>
+                                    <h2 class="text-3xl font-bold text-black">Nahidul's Paribahan</h2>
+                                    <p>Coach-1313-WEB ! AC_Business</p>
+                                </div>
                             </div>
-                        </div>
-                        <span class="bg-[#DCFCE7] text-[#1DD100] rounded-[16px] p-4"> 40 Seats left</span>
+                            <span class="bg-[#DCFCE7] text-[#1DD100] rounded-[16px] p-4"> 40 Seats left</span>
 
+                        </div>
+                        <!-- 2nd div  -->
+                        <div class="text-center text-gray-300 space-y-5 mt-7 bg-slate-50 p-7 rounded-[20px]">
+                            <div class="flex gap-x-96 items-baseline">
+                                <p class="font-semibold">Route</p>
+                                <h3 class="font-bold text-xl">Dhaka - Sylhet </h3>
+
+                            </div>
+                            <hr class="bg-slate-300 h-px border-none">
+
+                            <div class="flex gap-x-96 items-baseline">
+                                <p class="font-semibold">Departure Time</p>
+                                <h3 class="font-bold text-xl">9:00 PM</h3>
+
+                            </div>
+                            <hr class="bg-slate-300 h-px border-none">
+                            <div class=" flex justify-around">
+                                <button class="btn  bg-slate-200 text-gray-400 border-none">Boarding
+                                    Point-Laxmipur</button>
+                                <button class="btn  bg-slate-200 text-gray-400 border-none">Dropping
+                                    Point-Bogura</button>
+                                <button class="btn  bg-slate-200 text-gray-400 border-none">Est. Time - 11 Hour</button>
+                            </div>
+
+                        </div>
                     </div>
+
+                    <img src="images/info-devider.png" alt="">
                     <!-- 2nd div  -->
-                    <div class="text-center text-gray-300 space-y-5 mt-7 bg-slate-50 p-7 rounded-[20px]">
-                        <div class="flex gap-x-96 items-baseline">
-                            <p class="font-semibold">Route</p>
-                            <h3 class="font-bold text-xl">Dhaka - Sylhet </h3>
-
-                        </div>
-                        <hr class="bg-slate-300 h-px border-none">
-
-                        <div class="flex gap-x-96 items-baseline">
-                            <p class="font-semibold">Departure Time</p>
-                            <h3 class="font-bold text-xl">9:00 PM</h3>
-
-                        </div>
-                        <hr class="bg-slate-300 h-px border-none">
-                        <div class=" flex justify-around">
-                            <button class="btn  bg-slate-200 text-gray-400 border-none">Boarding
-                                Point-Laxmipur</button>
-                            <button class="btn  bg-slate-200 text-gray-400 border-none">Dropping
-                                Point-Bogura</button>
-                            <button class="btn  bg-slate-200 text-gray-400 border-none">Est. Time - 11 Hour</button>
-                        </div>
+                    <div>
+                        <img src="images/fare.png" alt="">
+                        <h3 class="text-3xl font-bold">550 TAKA</h3>
+                        <p class="font-bold text-xl">Per Seat</p>
 
                     </div>
-                </div>
-
-                <img src="images/info-devider.png" alt="">
-                <!-- 2nd div  -->
-                <div>
-                    <img src="images/fare.png" alt="">
-                    <h3 class="text-3xl font-bold">550 TAKA</h3>
-                    <p class="font-bold text-xl">Per Seat</p>
-
                 </div>
 
             </div>
         </section>
         <!--ticket price section part---- section end  -->
-        <section class="">
+        <section class="bg-white m-12 rounded-[20px] ">
 
+            <div class="flex">
+                <!-- seat div --------------------- -->
+                <div class="p-8">
+                    <!-- div: heading and some text here  -->
+                    <div class="p-4 border-gray-300 border-r-2 border-dashed space-y-5">
+                        <h2 class="text-2xl text-black font-semibold border-gray-300 border-b-2 border-dashed p-2">
+                            Select
+                            Your Seat</h2>
+                        <div class="flex justify-between border-gray-300 border-b-2 border-dashed items-baseline">
+                            <h3 class="text-xl font-semibold">Available</h3>
+                            <div class="flex   p-2  "><img src="images/seat-green-filled.png" alt="" srcset="">
+                                <span class="text-2xl font-semibold">Selected</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- price show and login from  -->
+                <div>
+                    <div>
+                        <h2 class="text-2xl text-black font-semibold border-gray-300 border-b-2 border-dashed p-2">
+                            Select
+                            Your Seat</h2>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>
