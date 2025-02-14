@@ -134,7 +134,7 @@
                         </div>
                         <img src="images/cupon-devider.png" alt="">
                         <div class="flex flex-col justify-center items-center">
-                            <h3 class="text-3xl font-bold">New15</h3>
+                            <h3 id="firstCoupon" class="text-3xl font-bold">NEW15</h3>
                             <p class="font-bold text-xl"> Coupon Code</p>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                         </div>
                         <img src="images/cupon-devider.png" alt="">
                         <div class="flex flex-col justify-center items-center">
-                            <h3 class="text-3xl font-bold">Couple 20</h3>
+                            <h3 id="secondCoupon" class="text-3xl font-bold">Couple 20</h3>
                             <p class="font-bold text-xl">Coupon Code</p>
                         </div>
                     </div>
@@ -266,7 +266,7 @@
                     <div class="flex gap-x-32 mt-5 justify-center ">
 
                         <!-- seat number 1 and 2 all  -->
-                        <div class="grid grid-cols-2 gap-8">
+                        <div class="SeatBtn grid grid-cols-2 gap-8 ">
                             <button id="A1" class="btn btn-outline">A1</button>
                             <button id="A2" class="btn btn-outline">A2</button>
                             <button id="B1" class="btn btn-outline">B1</button>
@@ -291,27 +291,27 @@
                         </div>
 
                         <!-- seat number 2 and 3 all  -->
-                        <div class="grid grid-cols-2 gap-8">
-                            <button class="btn btn-outline">A3</button>
-                            <button class="btn btn-outline">A4</button>
-                            <button class="btn btn-outline">B3</button>
-                            <button class="btn btn-outline">B4</button>
-                            <button class="btn btn-outline">C3</button>
-                            <button class="btn btn-outline">C4</button>
-                            <button class="btn btn-outline">D3</button>
-                            <button class="btn btn-outline">D4</button>
-                            <button class="btn btn-outline">E3</button>
-                            <button class="btn btn-outline">E4</button>
-                            <button class="btn btn-outline">F3</button>
-                            <button class="btn btn-outline">F4</button>
-                            <button class="btn btn-outline">G3</button>
-                            <button class="btn btn-outline">G4</button>
-                            <button class="btn btn-outline">H3</button>
-                            <button class="btn btn-outline">H4</button>
-                            <button class="btn btn-outline">I3</button>
-                            <button class="btn btn-outline">I4</button>
-                            <button class="btn btn-outline">J3</button>
-                            <button class="btn btn-outline">J4</button>
+                        <div class="SeatBtn grid grid-cols-2 gap-8">
+                            <button id="A3" class="btn btn-outline">A3</button>
+                            <button id="A4" class="btn btn-outline">A4</button>
+                            <button id="B3" class="btn btn-outline">B3</button>
+                            <button id="B4" class="btn btn-outline">B4</button>
+                            <button id="C3" class="btn btn-outline">C3</button>
+                            <button id="C4" class="btn btn-outline">C4</button>
+                            <button id="D3" class="btn btn-outline">D3</button>
+                            <button id="D4" class="btn btn-outline">D4</button>
+                            <button id="E3" class="btn btn-outline">E3</button>
+                            <button id="E4" class="btn btn-outline">E4</button>
+                            <button id="F3" class="btn btn-outline">F3</button>
+                            <button id="F4" class="btn btn-outline">F4</button>
+                            <button id="G3" class="btn btn-outline">G3</button>
+                            <button id="G4" class="btn btn-outline">G4</button>
+                            <button id="H3" class="btn btn-outline">H3</button>
+                            <button id="H4" class="btn btn-outline">H4</button>
+                            <button id="I3" class="btn btn-outline">I3</button>
+                            <button id="I4" class="btn btn-outline">I4</button>
+                            <button id="J3" class="btn btn-outline">J3</button>
+                            <button id="J4" class="btn btn-outline">J4</button>
 
                         </div>
 
@@ -342,18 +342,19 @@
                         </div>
 
 
-                        <div class="flex justify-between  pt-2 text-xl  font-semibold">
+                        <div
+                            class="flex justify-between  pt-2 text-xl  font-semibold  border-gray-500 border-t-2 border-dashed">
                             <h3>Total Price</h3>
                             <p>BDT <span id="totalPrice">0</span></p>
                         </div>
                         <!-- Coupon  -->
                         <label class="input input-bordered flex items-center gap-2 p-7 bg-white mt-4">
-                            <input type="text" class="grow" placeholder="Search" />
-                            <button class="btn btn-active btn-accent bg-[#1DD100]">Apply</button>
+                            <input id="coupon" type="text" class="grow" placeholder="Search" />
+                            <button onclick="apply()" class="btn btn-active btn-accent bg-[#1DD100]">Apply</button>
                         </label>
                         <div class="flex justify-between  pt-2 text-xl font-semibold">
                             <h3>Discount Price</h3>
-                            <p>BDT <span id="totalPrice">0</span></p>
+                            <p>BDT <span id="totaldiscountPrice">0</span></p>
                         </div>
                     </div>
 
@@ -371,7 +372,7 @@
                             class=" bg-white input input-bordered input-md w-full  " />
 
                         <div class="mt-10">
-                            <button class="btn btn-success w-full ">Success</button>
+                            <button class="btn  w-full bg-[#1DD100] text-black">Success</button>
                         </div>
                         <div class="flex justify-between p-5 pt-3">
                             <p class="underline text-sm">Terms and Conditions</p>
@@ -384,7 +385,8 @@
 
         </section>
     </main>
-    <footer class="footer  text-neutral-content p-10">
+    <!-- footer section--------------------------------------------------- -->
+    <footer class="footer  text-neutral-content p-10 flex justify-between">
         <aside>
             <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                 clip-rule="evenodd" class="fill-current">

@@ -10,11 +10,13 @@ function removeSelectsSeatById(id) {
 }
 //calculate price--------------------------------------
 function calculatePrice(num) {
+  //set number of seat
   const seatNum = document.getElementById("numberSeat");
   seatNum.innerText = num;
-  //create div
-  const seats = document.getElementById("newSeat");
-  const price = 550;
+  //show the total price
+  const total = num * 550;
+  const totalAmount = document.getElementById("totalPrice");
+  totalAmount.innerText = total;
 }
 
 //add seat info---------------------------------------------
@@ -25,13 +27,11 @@ function addSeatInfoId(seatinfo) {
 
   newDiv.classList.add(
     "flex",
-    // "gap-x-32",
     "text-xl",
     "font-semibold",
-
-    "justify-between"
+    "justify-between",
+    "py-2"
   );
-  //    "flex gap-x-32 text-xl font-semibold  pb-2 justify-between "
   newDiv.innerHTML = `
      <p>${seatinfo}</p>
      <p>Economy</p>
@@ -39,9 +39,9 @@ function addSeatInfoId(seatinfo) {
     
   `;
   const id1 = seatinfo + "1";
-  // console.log(id1);
+
   newDiv.setAttribute("id", id1);
-  //   newDiv.id = setinfo;
+
   seats.appendChild(newDiv);
 }
 
@@ -50,7 +50,29 @@ function removeSeatInfoById(info) {
   const seat = document.getElementById("newSeat1");
   const id1 = info + "1";
   const rev = document.getElementById(id1);
-  console.log(id1);
+
   seat.removeChild(rev);
-  //   rev.parentNode.removeChild(rev);
+}
+
+//check coupon function
+function apply() {
+  const code1 = document.getElementById("firstCoupon").innerText;
+  const code2 = document.getElementById("secondCoupon").innerText;
+  const mainAmount = document.getElementById("totaldiscountPrice");
+  let totalAmount = parseInt(document.getElementById("totalPrice").innerText);
+  // console.log(typeof totalAmount);
+
+  console.log("first code ", typeof code1, " = ", code1);
+  console.log("second code ", typeof itemseat, " = ", itemseat);
+  console.log("total taka", typeof totalAmount, "= ", totalAmount);
+  if (itemseat === code1) {
+    const discount1 = totalAmount * (15 / 100);
+    const couponDis = totalAmount - discount1;
+    console.log("discount1= ", discount1);
+    console.log("discountAmount = ", couponDis);
+    mainAmount.innerText = couponDis;
+  } else {
+    console.log("not match");
+  }
+  // mainAmount.innerText = couponDis;
 }
