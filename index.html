@@ -267,26 +267,26 @@
 
                         <!-- seat number 1 and 2 all  -->
                         <div class="grid grid-cols-2 gap-8">
-                            <button class="btn btn-outline">A1</button>
-                            <button class="btn btn-outline">A2</button>
-                            <button class="btn btn-outline">B1</button>
-                            <button class="btn btn-outline">B2</button>
-                            <button class="btn btn-outline">C1</button>
-                            <button class="btn btn-outline">C2</button>
-                            <button class="btn btn-outline">D1</button>
-                            <button class="btn btn-outline">D2</button>
-                            <button class="btn btn-outline">E1</button>
-                            <button class="btn btn-outline">E2</button>
-                            <button class="btn btn-outline">F1</button>
-                            <button class="btn btn-outline">F2</button>
-                            <button class="btn btn-outline">G1</button>
-                            <button class="btn btn-outline">G2</button>
-                            <button class="btn btn-outline">H1</button>
-                            <button class="btn btn-outline">H2</button>
-                            <button class="btn btn-outline">I1</button>
-                            <button class="btn btn-outline">I2</button>
-                            <button class="btn btn-outline">J1</button>
-                            <button class="btn btn-outline">J3</button>
+                            <button id="A1" class="btn btn-outline">A1</button>
+                            <button id="A2" class="btn btn-outline">A2</button>
+                            <button id="B1" class="btn btn-outline">B1</button>
+                            <button id="B2" class="btn btn-outline">B2</button>
+                            <button id="C1" class="btn btn-outline">C1</button>
+                            <button id="C2" class="btn btn-outline">C2</button>
+                            <button id="D1" class="btn btn-outline">D1</button>
+                            <button id="D2" class="btn btn-outline">D2</button>
+                            <button id="E1" class="btn btn-outline">E1</button>
+                            <button id="E2" class="btn btn-outline">E2</button>
+                            <button id="F1" class="btn btn-outline">F1</button>
+                            <button id="F2" class="btn btn-outline">F2</button>
+                            <button id="G1" class="btn btn-outline">G1</button>
+                            <button id="G2" class="btn btn-outline">G2</button>
+                            <button id="H1" class="btn btn-outline">H1</button>
+                            <button id="H2" class="btn btn-outline">H2</button>
+                            <button id="I1" class="btn btn-outline">I1</button>
+                            <button id="I2" class="btn btn-outline">I2</button>
+                            <button id="J1" class="btn btn-outline">J1</button>
+                            <button id="J3" class="btn btn-outline">J3</button>
 
                         </div>
 
@@ -319,31 +319,37 @@
                     </div>
                 </div>
                 <!-- price show and login from  ------------------------>
-                <div class="flex-1 p-10">
+                <div class="flex-1 p-10 ">
 
-                    <h2 class="text-2xl text-black font-semibold border-gray-300 border-b-2 border-dashed p-2">
+                    <h2 class="text-2xl text-black font-semibold border-gray-300 border-b-2 border-dashed p-2 ">
                         Select
                         Your Seat</h2>
 
                     <!-- 1 st div: seat and price info  -->
-                    <div class=" bg-gray-100 mt-5 p-5">
-                        <div
-                            class="flex gap-x-32 text-xl font-semibold  pb-2 justify-between  border-gray-500 border-b-2 border-dashed ">
-                            <p>Seat <span id="numberSeat">0</span></p>
-                            <p>Class</p>
-                            <p>price</p>
+                    <div class=" bg-gray-100 mt-5 p-5 px-7 rounded-[16px]">
+
+                        <div>
+                            <div
+                                class="flex text-xl font-semibold  pb-2 justify-between border-gray-500 border-b-2 border-dashed ">
+                                <p>Seat <span id="numberSeat" class="bg-[#1DD100] px-2 rounded-lg text-white">0</span>
+                                </p>
+                                <p class=" mr-[78px]">Class</p>
+                                <p>price</p>
+                            </div>
                         </div>
-                        <div id="newSeat">
+                        <div id="newSeat1">
 
                         </div>
-                        <div class="flex justify-between  pt-2 text-xl font-semibold">
+
+
+                        <div class="flex justify-between  pt-2 text-xl  font-semibold">
                             <h3>Total Price</h3>
                             <p>BDT <span id="totalPrice">0</span></p>
                         </div>
                         <!-- Coupon  -->
                         <label class="input input-bordered flex items-center gap-2 p-7 bg-white mt-4">
                             <input type="text" class="grow" placeholder="Search" />
-                            <button class="btn btn-active btn-accent">Accent</button>
+                            <button class="btn btn-active btn-accent bg-[#1DD100]">Apply</button>
                         </label>
                         <div class="flex justify-between  pt-2 text-xl font-semibold">
                             <h3>Discount Price</h3>
@@ -352,7 +358,7 @@
                     </div>
 
                     <!-- 2nd div login from  -->
-                    <div class="bg-gray-100 p-5 space-y-5 mt-8 ">
+                    <div class="bg-gray-100 p-5 space-y-5 mt-8 rounded-[16px] ">
                         <h2 class="text-black font-semibold text-xl ">Passenger Name*</h2>
                         <input type="text" placeholder="Type here"
                             class=" bg-white input input-bordered input-md w-full " />
@@ -422,6 +428,8 @@
             </div>
         </nav>
     </footer>
+    <script src="script/main.js"></script>
+    <script src="script/calling.js"></script>
 </body>
 
 
