@@ -3,7 +3,7 @@ function selectSeatID(id) {
   const seat = document.getElementById(id);
   seat.classList.add("bg-green-200");
 }
-//remove btn bg-----------------------------------------
+//remove btn bg-------------------------------------------
 function removeSelectsSeatById(id) {
   const seat = document.getElementById(id);
   seat.classList.remove("bg-green-200");

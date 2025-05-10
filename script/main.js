@@ -1,4 +1,4 @@
-//    variable
+//    variable declear
 let numberOfseat = 0;
 let totalSeat = 0;
 
